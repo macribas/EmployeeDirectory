@@ -1,0 +1,200 @@
+.main_text {
+	font-family: Arial Black;
+	font-weight: bold;
+	font-size: 25pt;
+	color: #000
+}
+
+.date_text {
+	font-family: Arial;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000
+}
+
+.div_default {
+	/* T R B L */
+	padding: 10px 0px 0px 10px;
+	text-align: left;
+	background: #FFF;
+}
+
+div.debug {
+	padding: 10px 0px 10px 20px;
+	color: white;
+	background: #3c4dac;
+	border-radius: 5px; 
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	border: 1px solid #B0B0B0;
+}
+
+div.subtitle {
+	color: #f3d583;
+	font-family: fantasy;
+	font-size: 24px;
+	padding-bottom: 10px;
+}
+
+.label_text {
+	font-family: Arial;
+	font-size: 12px;
+	padding: 0px 0px 0px 0px;
+	color: #000;
+}
+
+.subheading_text {
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0px 0px 0px 0px;
+	color: #000;
+}
+
+.toptable {
+	padding: 0px 0px 0px 0px !important;
+}
+
+fieldset {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	background: #ff0;
+	background-color: #f0f;
+}
+
+[layout-padding-minimal],
+[layout-padding-minimal] > [flex],
+[layout-padding-minimal] > [flex-gt-sm],
+[layout-padding-minimal] > [flex-md],
+[layout-padding-minimal] > [flex-lt-lg] {
+  padding: 0px 8px 0px 8px;
+}
+
+.button_default {
+	font-family: Arial;
+	font-size: 12px;
+	color: #FFF;
+	padding: 5px 20px 5px 20px;
+	border: none;
+	background: #2589CE;
+}
+
+.button_default:hover {
+	font-family: Arial;
+	font-size: 12px;
+	color: #FFF;
+	padding: 5px 20px 5px 20px;
+	border: none;
+	background: #259AEE;
+}
+
+.button_default:active {
+	font-family: Arial;
+	font-size: 12px;
+	color: #FFF;
+	border: none;
+	background: #256585;
+}
+
+.animateText {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 3s;
+    -webkit-animation-iteration-count: 1;
+}
+
+.idCodeMatch {
+	color: green;
+	font-size: 18px;
+	font-weight: bold;
+	padding-left: 10px;
+	padding-top: 20px;
+}
+
+.datepickerCustom {}
+  .datepickerCustom md-content {
+    padding-bottom: 200px;
+	}
+  .datepickerCustom .validation-messages {
+    font-size: 12px;
+    color: #dd2c00;
+    margin: 2px 0 0 25px;
+	}
+
+	/* md-toast.md-success-toast-theme {
+    .md-toast-content {
+    		color: white !important;
+        background-color: green !important;
+    } */
+    
+  md-toast.md-error-toast-theme .md-toast-content{
+    background-color: #FF0000 !important;
+	}
+
+  md-toast.md-success-toast-theme .md-toast-content{
+    background-color: #5CB801 !important;
+	}
+	
+	md-toast.md-warning-toast-theme .md-toast-content{
+    background-color: #FFAB27 !important;
+	}
+	
+	md-toast.md-error-toast-theme .md-toast-content .md-button.md-highlight {
+	color: white !important;
+	}
+	
+	md-toast.md-success-toast-theme .md-toast-content .md-button.md-highlight {
+	color: white !important;
+	}
+	
+	md-toast.md-warning-toast-theme .md-toast-content .md-button.md-highlight {
+	color: white !important;
+	}
+	
+	md-toast .md-toast-content {
+	font-size: 18px !important;
+	}
+	
+	/* .custom-disable-color {} 
+		.md-select-value .md-text{
+		color: black;
+	} */
+	
+	
+	input.inputBorderOnSuccess.md-input {
+		border-bottom: 3px solid #5Cb801;
+		padding-left: 20px;
+	}
+	
+	span.input-group-addon.successCheckbox {
+		position: absolute;
+    margin-top: 2px;
+    color: #5Cb801;
+	}
+
+	.md-button.md-fab.md-tiny {
+		width: 36px;
+    height: 36px;
+		line-height: 20px;
+		width: 30px;
+		height: 20px;
+	}
+
+	span.label {
+		margin-bottom: 10px;
+		line-height: 36px;
+		color: black;
+	}
+	
+	span.subtitle {
+		color: #f7d763;
+		font-size: 32px;
+		font-weight: bold;	
+		position: absolute;
+		margin: -10px 0px 0px 10px;
+	}
+	
+	md-select .selectBorderOnSuccess.md-select-value{
+		border-bottom: 3px solid;
+	}
+}
