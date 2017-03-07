@@ -99,4 +99,6 @@ credentials = <your_mongoDB_user>:<your_mongoDB_password>@employees?uri.authMech
 
     -   manifest.yml
 
-3.  Run **cf push**
+3.  Change the "host" property in the manifest.yml file to something unique. 
+
+4.  Run **cf push**
