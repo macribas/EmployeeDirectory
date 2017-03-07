@@ -23,7 +23,8 @@ How to deploy on Bluemix
     1.  Copy the property “ca_certificate_base64” to a text file
 
     2.  Use a tool to decode the certificate. You’ll get a resulting file that
-        is surrounded with BEGIN CERTIFICATE and END CERTIFICATE
+        is surrounded with BEGIN CERTIFICATE and END CERTIFICATE. Name the file
+        mongocert.crt.
 
 2.  Or you can obtain the certificate directly from the DB using the command:
 
@@ -34,17 +35,24 @@ How to deploy on Bluemix
     openssl s_client -showcerts -connect
     bluemix-sandbox-dal-9-portal.2.dblayer.com:23607
 
-    Copy the content between the lines BEGIN CERTIFICATE and END CERTIFICATE
+    Copy the content between the lines BEGIN CERTIFICATE and END CERTIFICATE and
+    create a new file named mongocert.crt
 
 3.  Create a truststore with that certificate:
 
     keytool -import -alias compose -file ./\<name_of_your_cert_file\> -keystore
-    ./\<name_of_your_truststore\>.jks -storetype jks -storepass
-    \<your_truststore_password\>
+    ./mongostore.jks -storetype jks -storepass \<your_truststore_password\>
 
     Example:  
-    keytool -import -alias compose -file ./mongodbcert -keystore
+    keytool -import -alias compose -file ./mongodbcert.crt -keystore
     ./mongostore.jks -storetype jks -storepass ilikeamiga
+
+    *Please use mongostore.jks as the name of the truststore.*
+
+### Copy the truststore to your Java project
+
+1.  Copy the truststore file to the /src/main/resources folder, replacing the
+    one that is there. Please use the same name “mongostore.jks”.
 
 ### Load the database
 
@@ -59,12 +67,12 @@ How to deploy on Bluemix
 
     mongo --ssl --sslAllowInvalidCertificates
     \<your_mongoDB_hostname\>:\<your_mongoDB_port\>/admin -u admin -p
-    \<your_mongoDB_password\> --sslCAFile \<name_of_your_truststore\>.jks
+    \<your_mongoDB_password\> --sslCAFile mongodbcert.crt
 
     Example:  
     mongo --ssl --sslAllowInvalidCertificates
     bluemix-sandbox-dal-9-portal.2.dblayer.com:23607/admin -u admin -p
-    LLBRYSVQYJQGFTOS --sslCAFile mongodbcert.jks
+    LLBRYSVQYJQGFTOS --sslCAFile mongodbcert.crt
 
 ### Change application.properties
 
