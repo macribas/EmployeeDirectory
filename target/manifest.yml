@@ -1,0 +1,9 @@
+---
+applications:
+- name: EmployeeDirectory
+  host: employeedirectory
+  memory: 1G
+  buildpack: https://github.com/cloudfoundry/java-buildpack
+  path: EmployeeDirectory.war
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '[memory_calculator: {memory_heuristics: {heap: 70, metaspace: 15, native: 10, permgen: 15, stack: 5}, memory_sizes: {metaspace: 128m}}]'
