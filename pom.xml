@@ -34,6 +34,8 @@
             <version>4.3.6.RELEASE</version>
         </dependency>
 
+
+
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -41,12 +43,22 @@
             <version>1.7.24</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.24</version>
+        </dependency>
+
+
         <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-mongodb</artifactId>
             <version>1.10.0.RELEASE</version>
         </dependency>
+
+
 
     </dependencies>
 
@@ -56,7 +68,6 @@
         <finalName>${project.artifactId}</finalName>
         <testOutputDirectory>target/test-classes</testOutputDirectory>
         <sourceDirectory>src/main/java</sourceDirectory>
-        <scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
         <testSourceDirectory>src/test/java</testSourceDirectory>
         <resources>
             <resource>

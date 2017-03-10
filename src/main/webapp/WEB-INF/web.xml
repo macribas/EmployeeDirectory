@@ -7,13 +7,9 @@
 	<!-- The context params that are read by Log4jConfigListener -->
 	<context-param>
 		<param-name>log4jConfigLocation</param-name>
-		<param-value>classpath:log4j.xml</param-value> 
+		<param-value>classpath:log4j2.xml</param-value>
 	</context-param>
 
-	<listener>
-		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-	</listener>
-	
 	<!-- The context params that are read by ContextLoaderListener  -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
