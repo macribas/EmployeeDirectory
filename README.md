@@ -1,7 +1,7 @@
 EmployeeDirectory
 =================
 
-Fork from avaldes.com, no Maven
+Fork from avaldes.com, with Maven
 
 How to deploy on Bluemix
 ------------------------
@@ -102,3 +102,11 @@ credentials = <your_mongoDB_user>:<your_mongoDB_password>@employees?uri.authMech
 3.  Change the "host" property in the manifest.yml file to something unique. 
 
 4.  Run **cf push**
+
+### Test on Bluemix
+
+1. Run the app using http and not https. Not sure why it is not working when using the https endpoint.
+
+2. Test it with http://<your_route>/rest/employees. Verify that it returns all employees in the database.
+
+3. Open the main window at http://<your_route>. Enter the name of one of the employees. Verify that it shows up in the table below. 
