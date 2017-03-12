@@ -39,9 +39,11 @@
 <%
 	// This is JSP code to define RESTful call URL to get Manager List JSON data
 	// can be replaced with any other way that you're using to define RESTful URL with parameters
-	String fullProtocol = request.getProtocol().toLowerCase();
-	String protocol[] = fullProtocol.split("/");
-	String baseUrl = protocol[0] + "://" + request.getHeader("Host");
+	String protocol = request.getHeader("x-forwarded-proto");
+	if(protocol.isEmpty()) {
+	    protocol = "http";
+	}
+	String baseUrl = protocol + "://" + request.getHeader("Host");
 	String params = "";
 
 	boolean isDebug = false;
@@ -51,6 +53,7 @@
 		isDebug = true;
 	}
 %>
+
 <body ng-controller="MainCtrl">
 <!-- <span us-spinner="{color: 'red', radius:30, width:8, length: 16}" spinner-key="spinner-0"></span> -->
 	<md-toolbar>
